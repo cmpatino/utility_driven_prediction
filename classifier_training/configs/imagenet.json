@@ -1,0 +1,9 @@
+{
+    "batch_size": 256,
+    "compute_hierarchy": false,
+    "dataset": "imagenet",
+    "epochs": 1,
+    "learning_rate": 0.001,
+    "validation_pct": 0.1,
+    "vision_backbone": "EfficientNet_B0"
+}
