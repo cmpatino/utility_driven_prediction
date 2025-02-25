@@ -2,7 +2,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2410.01767-b31b1b.svg)](https://arxiv.org/abs/2410.01767)
 
-
+**Authors: Santiago Cortes-Gomez, Carlos Miguel Patiño, Yewon Byun, Steven Wu, Eric Horvitz, Bryan Wilder**
 
 This repository contains the code for the Utility-Driven Conformal Prediction paper published at ICLR 2025. We provide all the necessary code to reproduce the experiments in the paper.
 
