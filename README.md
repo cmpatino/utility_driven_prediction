@@ -45,7 +45,36 @@ While reproducing the results, keep in mind of the runtimes of the experiments a
 
 ## Reproducing Tables and Plots
 
-If you run the code on the previous section, you will generate a parquet file with the results of the experiments. To reproduce the tables and plots in the paper, you can use the scripts available in the `plotting` directory.
+If you run the code on the previous section, you will generate a parquet file with the results of the experiments. The fields in the generated parquet file are:
+
+* `dataset`: Dataset used for the experiment.
+* `trial_idx`: Index of the trial. The field is useful to identify runs ran with the same configuration but different random seeds.
+* `size`: Average size of the prediction sets.
+* `sum_penalties`: Sum of penalties across all samples.
+* `max_penalties`: Maximum penalty across all samples.
+* `coverage_loss`: Coverage loss value.
+* `lambda`: Lambda hyperparameter value.
+* `loss_function`: Method used for set prediction.
+* `alpha`: Target statistical coverage.
+* `empirical_coverage`: Achieved empirical coverage for all the samples in that experiment.
+* `fold`: Cross-validation fold.
+* `probabilities_id`: Directory containing the softmax scores and other artifacts.
+* `accuracy`: Classification accuracy.
+* `granular_coverage`: Coverage at a granular level---i.e., whether the prediction set contains the true class for that particular sample.
+* `entropy`: Entropy of the predicted set.
+* `true_softmax`: The softmax score of the true class.
+
+### Equivalance of Naming Conventions
+
+The naming conventions in the paper and in this repository are not the same. The following table shows the equivalences:
+
+* Separable Loss Cases:
+  * Penalized Conformal: Cumulative
+  * Penalized Ratio: NeymanPearson
+* Non-Separable Loss Cases:
+  * Penalized Conformal: MarginalMax
+  * Greedy Optimizer on Max: GreedyMax
+  * Greedy Optimizer on Coverage: GreedyCoverageFunction
 
 ## Training Classifiers
 
