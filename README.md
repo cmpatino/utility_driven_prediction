@@ -64,18 +64,6 @@ If you run the code on the previous section, you will generate a parquet file wi
 * `entropy`: Entropy of the predicted set.
 * `true_softmax`: The softmax score of the true class.
 
-### Equivalance of Naming Conventions
-
-The naming conventions in the paper and in this repository are not the same. The following table shows the equivalences:
-
-* Separable Loss Cases:
-  * Penalized Conformal: Cumulative
-  * Penalized Ratio: NeymanPearson
-* Non-Separable Loss Cases:
-  * Penalized Conformal: MarginalMax
-  * Greedy Optimizer on Max: GreedyMax
-  * Greedy Optimizer on Coverage: GreedyCoverageFunction
-
 ## Training Classifiers
 
 For full reproducibility of our results, we also provide the code we used to train the classifiers for each dataset in the `classifier_training` directory.
