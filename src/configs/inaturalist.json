@@ -1,0 +1,20 @@
+{
+    "probabilities_ids": [
+        "init_scores_inaturalist"
+    ],
+    "lambdas": [
+        0,
+        0.01
+    ],
+    "alphas": [
+        0.1
+    ],
+    "loss_functions": [
+        "GreedyCoverageFunction",
+        "GreedyMax",
+        "Cumulative",
+        "MarginalMax",
+        "NeymanPearson"
+    ],
+    "n_trials": 1
+}
