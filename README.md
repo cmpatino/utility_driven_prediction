@@ -78,3 +78,7 @@ The configuration files we provide are:
 ## Experiment Logging
 
 We used Weights and Biases to log the the classifier training and the metrics for the set generation. You can use the `--log_wandb` flag to log the experiments to Weights and Biases but you will need to set up your own credentials in a `.env` file with the format specified in the `.env.example` file.
+
+## Bayesian Benchmark
+
+We provide the code to run the Bayesian benchmark in the `bayesian_benchmark` directory. This benchmark required its own classifier training and set generation scripts because of the differences of the Bayesian Neural Network.
